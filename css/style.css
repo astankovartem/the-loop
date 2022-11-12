@@ -56,11 +56,13 @@ body{
     position: fixed;
     top: 0;
     left: 0;
+    padding-top: 50px;
+    transition: all 0.3s ease 0s;
+    z-index: 2;
 }
 .header__conteiner{
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
     align-items: center;
 }
 .nav1__list{
@@ -78,7 +80,7 @@ body{
 }
 .nav2__list{
     display: flex;
-    margin-right: 101px;
+    margin-right: 91px;
 }
 .nav2__list2{
     display: flex;
@@ -86,15 +88,52 @@ body{
 .nav1__item{
     padding-right: 10px;
     margin-right: 35px;
+    position: relative;
+    transition: all 0.2s ease 0s;
+    background: url(../img/Polygon.svg) right center no-repeat;
+}
+.nav1_link{
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.03em;
     color: #212121;
+    text-decoration: none;
+}
+.nav1__itemList{
+    position: absolute;
+    min-width: 150px;
+    left: 0;
+    top: 10px;
+    display: none;
+    padding-top: 10px;
+}
+.nav1__itemListLink{
+    color: #FFFFFF;
+    background-color: #D7B399;
+    padding: 10px 10px 10px 10px;
+    transition: all 0.2s ease 0s;
+}
+.nav1__itemListLink:hover{
+    opacity: 0.5;
+    transition: all 0.2s ease 0s;
 }
 .nav1__item:last-child{
     margin: 0;
 }
+
+body.mouse .nav1__item:hover .nav1__itemList{
+    display: block;
+}
+body.mouse .nav1__item:hover{
+    background: url(../img/Polygon2.png) right center no-repeat;
+    transition: all 0.2s ease 0s;
+}
+.nav1__item.active{
+    background: url(../img/Polygon2.png) right center no-repeat;
+    transition: all 0.2s ease 0s;
+}
+
 .logo{
     font-weight: 700;
     font-size: 24px;
@@ -107,6 +146,11 @@ body{
 }
 .nav2__item{
     margin-right: 35px;
+    transition: all 0.2s ease 0s;
+}
+.nav2__item:hover{
+    opacity: 0.5;
+    transition: all 0.2s ease 0s;
 }
 .nav2__link{
     font-weight: 500;
@@ -120,22 +164,44 @@ body{
 }
 .nav2__img{
     margin-right: 15px;
+    transition: all 0.15s ease 0s;
+}
+.nav2__img:hover{
+    opacity: 0.5;
+    transition: all 0.15s ease 0s;
 }
 .nav2__img:last-child{
     margin-right: 0;
 }
 
 .intro{
-    padding-top: 250px;
     background: #F9F6F1;
+}
+
+.intro-swiper{
+    overflow: hidden;
+    padding-top: 250px;
     padding-bottom: 70px;
+}
+.intro-swiper .swiper-pagination{
+    position: static;
+}
+.intro-swiper .swiper-pagination-bullet{
+    width: 40px;
+    height: 7px;
+    background-color: #D7B399;
+    border-radius: 0;
 }
 .intro__block1{
     max-width: 550px;
 }
-.intro__conteiner{
+.swiper-slide{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1140px;
+    margin: 0 auto;
+    
 }
 .intro__title2{
     font-weight: 400;
@@ -162,8 +228,12 @@ body{
     font-size: 16px;
     letter-spacing: 0.03em;
     color: #FFFFFF;
+    transition: all 0.15s ease 0s;
 }
-
+.intro__button:hover{
+    opacity: 0.5;
+    transition: all 0.15s ease 0s;
+}
 .intro__block2{
     display: flex;
     margin-bottom: 130px;
@@ -260,6 +330,11 @@ body{
     height: 30px;
     background: #D7B399;
     border: none;
+    transition: all 0.15s ease 0s;
+}
+.section2__button:hover{
+    opacity: 0.5;
+    transition: all 0.15s ease 0s;
 }
 
 .section3__conteiner{
@@ -271,11 +346,21 @@ body{
     width: 277px;
     height: 236px;
     background: url(../img/section3__block1.png) no-repeat;
+    transition: all 0.15s ease 0s;
+}
+.section3__block1:hover{
+    opacity: 0.5;
+    transition: all 0.15s ease 0s;
 }
 .section3__block2{
     width: 277px;
     height: 236px;
     background: url(../img/section3__block2.png) no-repeat;
+    transition: all 0.15s ease 0s;
+}
+.section3__block2:hover{
+    opacity: 0.5;
+    transition: all 0.15s ease 0s;
 }
 .section3__text{
     margin: 186px 0 0 30px;
@@ -302,6 +387,11 @@ body{
 }
 .models__block{
     margin: 0 auto 50px auto;
+    transition: all 0.15s ease 0s;
+}
+.models__block:hover{
+    opacity: 0.5;
+    transition: all 0.15s ease 0s;
 }
 .models__img{
     margin-bottom: -86px;
@@ -326,6 +416,11 @@ body{
     align-items: center;
     border: none;
     margin: 0 auto;
+    transition: all 0.15s ease 0s;
+}
+.models__button:hover{
+    opacity: 0.5;
+    transition: all 0.15s ease 0s;
 }
 .models__buttonP{
     margin-right: 9px;
@@ -378,8 +473,12 @@ body{
     font-size: 14px;
     color: #FFFFFF;
     border: none;
+    transition: all 0.15s ease 0s;
 }
-
+.subscription__buttont:hover{
+    opacity: 0.5;
+    transition: all 0.15s ease 0s;
+}
 .footer__content{
     padding: 73px 0 50px 0;
     background: #212121;
@@ -431,7 +530,12 @@ body{
     font-weight: 400;
     font-size: 14px;
     color: #CBCFD4;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
+    transition: all 0.15s ease 0s; 
+}
+.footer__listItem:hover{
+    opacity: 0.5;
+    transition: all 0.15s ease 0s;
 }
 .icon1{
     padding-left: 29px;
@@ -456,4 +560,15 @@ body{
     font-size: 14px;
     color: #212121;
     margin: 0 5px 15px 5px;
+}
+.fixed{
+    background-color: #b99b85;
+    opacity: 0.98;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.open{
+    display: block;
 }
