@@ -61,3 +61,31 @@ let swiper = new Swiper('.intro-swiper', {
 		disableOnInteraction: false
 	}
 });
+
+let burger = document.querySelector(".burger");
+let burger_window = document.querySelector(".burger_window");
+let burger_line = document.querySelectorAll(".burger_line");
+burger.addEventListener("click", menuFunction);
+
+
+function menuFunction(e){
+	burger_window.classList.toggle('active');
+	for (let i of burger_line){
+		i.classList.toggle('active');
+	}
+}
+
+
+const scrollItems = document.querySelectorAll('.element-animation');
+    
+    const scrollAnimation = () => {
+		let windowCenter = (window.innerHeight / 1.2) + window.scrollY;
+		scrollItems.forEach(el => {
+			let scrollOffset = el.offsetTop + (el.offsetHeight / 2);
+			if (windowCenter >= scrollOffset) {
+				el.classList.add('_active');
+			} else {
+				el.classList.remove('_active');
+			}
+		});
+	};

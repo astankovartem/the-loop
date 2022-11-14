@@ -1,5 +1,7 @@
 @media(max-width: 1111px){
-    
+    .intro-swiper{
+        padding-top: 150px;
+    }
     .intro__block1{
         margin: 0 auto 100px auto; 
         text-align: center;
